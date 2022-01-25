@@ -15,12 +15,35 @@ body{
     width: min(90vw, 800px);
     margin: auto;
 }
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
 /*Titles*/
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
     color: var(--dark-blue);
     font-weight: normal;
+}
+/*Links and buttons*/
+a{
+    color: #49AA26;
+    text-decoration:none;
+}
+a:hover{
+    color: #3dd705;
+}
+.button.new{
+    display: inline-block;
+    margin-bottom: .8rem;
 }
 /*Header*/
 header{
@@ -51,6 +74,9 @@ header{
 .card h3{
     font-weight: normal;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .card p{
    font-size: 2rem;
@@ -67,8 +93,13 @@ header{
     border-spacing: 0 0.5rem;
     color: #969cb3;
 }
-table thead tr:first-child, table tbody td:first-child{
+table thead tr:first-child, 
+table tbody td:first-child{
     border-radius: 0.25rem 0 0 0.25rem;
+}
+table thead tr:last-child, 
+table tbody td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 table tr{
     opacity: 0.7;
